@@ -1,0 +1,3 @@
+(()=>{var t={};/*!***************************!*\
+  !*** ./src/drawWorker.js ***!
+  \***************************/ let o=null,e=null,n=0,s=0,i=0,a=0,r=0,l=0;function c(t){let o=t.array;for(let n of(e.clearRect(0,0,i,a),e.translate(t.positionShiftX,t.positionShiftY),e.beginPath(),o))n.distanceToPlayer<l&&(e.moveTo(n.positionX+n.offsetX,n.positionY+n.offsetY),e.lineTo(n.positionX-n.offsetX,n.positionY-n.offsetY));e.stroke()}function f(t){[o,n,s]=[t.canvas,t.positionX,t.positionY],[i,a,r]=[t.screenOptions.width,t.screenOptions.height,t.screenOptions.scale],(e=o.getContext("2d")).translate(i/2-n*r,a/2-s*r),e.scale(r,r),l=1.1*Math.sqrt((a/r/2)**2+(i/r/2)**2),e.strokeStyle=t.screenOptions.color}onmessage=t=>{t.data.array?c(t.data):t.data.canvas&&f(t.data)}})();
